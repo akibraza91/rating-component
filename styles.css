@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+:root
+{
+    --orange: hsl(25, 97%, 53%);
+
+    --white: hsl(0, 0%, 100%);
+    --lightGrey: hsl(217, 12%, 63%);
+    --darkBlue: hsl(213, 19%, 18%);
+    --veryDarkBlue: hsl(216, 12%, 8%);
+
+    --paraSize: 15px;
+    --font: "Overpass";
+}
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: var(--font), sans-serif;
+    background-color: var(--veryDarkBlue);
+}
+main
+{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(farthest-side at top center, hsl(215deg, 17%, 15%), hsl(215deg, 27%, 12%));
+    border-radius: 2em;
+    overflow: hidden;
+}
+.myContainer
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    transition: transform 0.2s ease;
+}
+.myContainer .container
+{
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    padding: 2em;
+}
+.myContainer .container .star
+{
+    position: relative;
+    width: 45px;
+    height: 45px;
+    padding: .9rem;
+    background-color: var(--darkBlue);
+    border-radius: 50px;
+}
+.myContainer .container img
+{
+    width: 100%;
+}
+.myContainer .container h2
+{
+    position: relative;
+    width: 100%;
+    color: var(--white);
+    margin-top: 1em;
+}
+.myContainer .container p
+{
+    color: var(--lightGrey);
+    line-height: 1.5;
+    font-size: var(--paraSize);
+}
+.ratings
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+}
+.ratings span
+{
+    position: relative;
+    width: 45px;
+    height: 45px;
+    padding: 1rem;
+    margin: auto;
+    border-radius: 50px;
+    background-color: var(--darkBlue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    margin-top: 0.5em;
+    cursor: pointer;
+}
+.ratings span:hover
+{
+    background-color: var(--orange);
+    color: var(--veryDarkBlue);
+}
+.ratings span.active
+{
+    background-color: var(--white);
+    color: var(--veryDarkBlue);
+}
+.myContainer .container button
+{
+    position: relative;
+    width: 100%;
+    padding: 0.7em 0;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    background-color: var(--orange);
+    margin-top: 0.8em;
+    cursor: pointer;
+    border: none;
+}
+.myContainer .container button:hover
+{
+    background-color: var(--white);
+}
+.myContainer .thankyou
+{
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: 2em;
+}
+.myContainer .thankyou .imgBox
+{
+    margin-top: -1em;
+}
+.myContainer .thankyou .rating
+{
+    color: hsla(25, 97%, 53%, 0.7);
+    background-color: var(--darkBlue);
+    font-size: var(--paraSize);
+    padding: 0.5em 1.5em;
+    border-radius: 50px;
+    text-align: center;
+}
+.myContainer .thankyou h2
+{
+    color: var(--white);
+    margin-top: 1em;
+}
+.myContainer .thankyou:last-child
+{
+    color: var(--lightGrey);
+    text-align: center;
+    font-size: var(--paraSize);
+}
+
+@media (max-width: 375px)
+{
+    main
+    {
+        width: 100%;
+    }
+}
